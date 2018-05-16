@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVz-E6-la8">
+                                <rect key="frame" x="127.5" y="597" width="120" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.61825280940000005" blue="0.088455048930000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="KNj-2Q-qDk"/>
+                                    <constraint firstAttribute="height" constant="30" id="ODl-xe-6io"/>
+                                </constraints>
+                                <state key="normal" title="保存Live Photo">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveLivePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cXm-aG-t9Z"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IBS-5v-qRj">
+                                <rect key="frame" x="0.0" y="20" width="375" height="211"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nAe-Zi-Ef9">
+                                        <rect key="frame" x="-2" y="196" width="379" height="31"/>
+                                        <color key="minimumTrackTintColor" red="1" green="0.046772837529804212" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="sliderValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="APU-lT-GMF"/>
+                                            <action selector="sliderValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zau-M1-hUF"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="nAe-Zi-Ef9" firstAttribute="leading" secondItem="IBS-5v-qRj" secondAttribute="leading" id="5z2-tu-PUJ"/>
+                                    <constraint firstAttribute="width" secondItem="IBS-5v-qRj" secondAttribute="height" multiplier="16:9" id="69v-db-87D"/>
+                                    <constraint firstAttribute="bottom" secondItem="nAe-Zi-Ef9" secondAttribute="bottom" constant="-15" id="Fjm-fJ-Xgp"/>
+                                    <constraint firstAttribute="trailing" secondItem="nAe-Zi-Ef9" secondAttribute="trailing" id="j61-N3-LYH"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ycP-xn-mcQ">
+                                <rect key="frame" x="113" y="251" width="150" height="267"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3fK-7P-bKX">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="267"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ycP-xn-mcQ" secondAttribute="height" multiplier="375:667" id="1gW-kI-5sZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="3fK-7P-bKX" secondAttribute="bottom" id="8ea-Fr-dQT"/>
+                                    <constraint firstAttribute="trailing" secondItem="3fK-7P-bKX" secondAttribute="trailing" id="JXd-PT-TFW"/>
+                                    <constraint firstItem="3fK-7P-bKX" firstAttribute="top" secondItem="ycP-xn-mcQ" secondAttribute="top" id="dxy-mS-GsU"/>
+                                    <constraint firstItem="3fK-7P-bKX" firstAttribute="leading" secondItem="ycP-xn-mcQ" secondAttribute="leading" id="iFj-wO-Zgo"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3nz-tP-XfC">
+                                <rect key="frame" x="128" y="547" width="120" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.61825280940000005" blue="0.088455048930000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="BxG-PO-xwg"/>
+                                    <constraint firstAttribute="height" constant="30" id="U3W-hM-hpK"/>
+                                </constraints>
+                                <state key="normal" title="预览Live Photo">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveLivePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eh4-2X-x3x"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3nz-tP-XfC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="A49-K3-Khu"/>
+                            <constraint firstItem="ycP-xn-mcQ" firstAttribute="top" secondItem="IBS-5v-qRj" secondAttribute="bottom" constant="20" id="Q0q-gk-a6w"/>
+                            <constraint firstItem="IBS-5v-qRj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="U6i-Yg-bTA"/>
+                            <constraint firstItem="ycP-xn-mcQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="a3o-w2-0PW"/>
+                            <constraint firstItem="IBS-5v-qRj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bvu-M6-kMc"/>
+                            <constraint firstItem="AVz-E6-la8" firstAttribute="top" secondItem="3nz-tP-XfC" secondAttribute="bottom" constant="20" id="ceW-lm-KfE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AVz-E6-la8" secondAttribute="bottom" constant="40" id="kLq-ar-9sZ"/>
+                            <constraint firstItem="ycP-xn-mcQ" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.4" id="kOQ-bf-C7W"/>
+                            <constraint firstItem="IBS-5v-qRj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="m2i-Nz-iTt"/>
+                            <constraint firstItem="IBS-5v-qRj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nJg-lD-wJx"/>
+                            <constraint firstItem="AVz-E6-la8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pQ1-JX-rra"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IBS-5v-qRj" secondAttribute="trailing" id="tda-cN-XYV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="coverImage" destination="3fK-7P-bKX" id="9Mt-zN-bNu"/>
+                        <outlet property="livePhotoBackView" destination="ycP-xn-mcQ" id="cMd-tM-XXQ"/>
+                        <outlet property="playerView" destination="IBS-5v-qRj" id="J1s-qx-SBB"/>
+                        <outlet property="slider" destination="nAe-Zi-Ef9" id="hci-Wf-qqc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
