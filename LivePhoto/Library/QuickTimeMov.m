@@ -166,6 +166,8 @@ static NSString *const kCustomSecond = @"second";
                             NSLog(@"cannot write: %@", writer.error);
                             [reader cancelReading];
                         }
+                        //释放内存，否则出现内存问题
+                        CFRelease(buffer);
                     }
                 } else {
                     [input markAsFinished];
@@ -175,6 +177,7 @@ static NSString *const kCustomSecond = @"second";
                         dispatch_queue_t media_queue = dispatch_queue_create("assetAudioWriterQueue", 0);
                         [audioWriterInput requestMediaDataWhenReadyOnQueue:media_queue usingBlock:^{
                             while ([audioWriterInput isReadyForMoreMediaData]) {
+                                
                                 CMSampleBufferRef sampleBuffer2 = [audioReaderOutput copyNextSampleBuffer];
                                 if (audioReader.status == AVAssetReaderStatusReading && sampleBuffer2 != nil) {
                                     if (![audioWriterInput appendSampleBuffer:sampleBuffer2]) {
@@ -191,6 +194,9 @@ static NSString *const kCustomSecond = @"second";
                                             NSLog(@"finish writing.");
                                         }
                                     }];
+                                }
+                                if (sampleBuffer2) {//释放内存，否则出现内存问题
+                                    CFRelease(sampleBuffer2);
                                 }
                             }
                         }];
@@ -209,7 +215,9 @@ static NSString *const kCustomSecond = @"second";
             }
         }];
         while (writer.status == AVAssetWriterStatusWriting) {
-            [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.5]];
+           @autoreleasepool {
+               [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.5]];
+           }
         }
         if (writer.error) {
             if (result) {
@@ -230,6 +238,7 @@ static NSString *const kCustomSecond = @"second";
     } @finally {
         
     }
+
 }
 
 - (NSArray<AVMetadataItem*> *)metadata {

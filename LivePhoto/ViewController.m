@@ -62,6 +62,8 @@
         //将处理的结果置空
         ws.imageWriteRes = NO;
         ws.videoWriteRes = NO;
+        [ws.livePhotoView stopPlayback];
+        ws.livePhotoView.livePhoto = nil;
         ws.livePhotoView.hidden = YES;
     }];
     
@@ -118,10 +120,6 @@
 }
 - (void)touchAciton {
     [self.frameView changeAlertLabelStart:YES];
-//    NSLog(@"结束了");
-//    [UIView animateWithDuration:0.3 animations:^{
-//        self.frameView.hidden = YES;
-//    }];
 }
 
 //进入前台
@@ -159,6 +157,9 @@
         if (sender.tag == 1) {
             //存储live photo
             [self writeLive:[NSURL fileURLWithPath:videoPath] image:[NSURL fileURLWithPath:imagePath]];
+        } else {
+            //点击了预览 就播放
+            [self.livePhotoView startPlaybackWithStyle:PHLivePhotoViewPlaybackStyleFull];
         }
         return;
     }
@@ -207,11 +208,13 @@
                 if (sender.tag == 1) {
                     //存储live photo
                     [ws writeLive:[NSURL fileURLWithPath:videoPath] image:[NSURL fileURLWithPath:imagePath]];
+                } else {
+                    //点击了预览 就播放
+                    [self.livePhotoView startPlaybackWithStyle:PHLivePhotoViewPlaybackStyleFull];
                 }
             }
         });
     }
-    
 }
 
 /*
