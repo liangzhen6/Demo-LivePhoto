@@ -19,11 +19,11 @@
 #import "QuickTimeMov.h"
 
 #import "FrameView.h"
+#import "PhotoLibrary.h"
 
 @interface ViewController ()
 @property(nonatomic,assign)BOOL imageWriteRes;
 @property(nonatomic,assign)BOOL videoWriteRes;
-@property(nonatomic,copy)NSString *originVideoPath;
 @property (weak, nonatomic) IBOutlet UIView *playerView;
 @property(nonatomic,strong)AVPlayer *player;
 @property (weak, nonatomic) IBOutlet UISlider *slider;
@@ -36,14 +36,6 @@
 @implementation ViewController
 /* 只有6s以后的设备可以存储以及展示livePhoto  */
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    AVPlayer *player = [AVPlayer playerWithURL:[NSURL fileURLWithPath:self.originVideoPath]];
-    AVPlayerLayer * playerLayer = [AVPlayerLayer playerLayerWithPlayer:player];
-    playerLayer.frame = self.playerView.bounds;
-    [self.playerView.layer insertSublayer:playerLayer below:self.slider.layer];
-    playerLayer.videoGravity = AVLayerVideoGravityResizeAspect;
-    [player play];
-    self.player = player;
     CGFloat width = [UIScreen mainScreen].bounds.size.width/3;
     CGFloat height = width * 9/16;
     
@@ -56,7 +48,6 @@
     [self.livePhotoBackView addSubview:livePhotoView];
     livePhotoView.hidden = YES;
     self.livePhotoView = livePhotoView;
-    
     [_frameView setSelectBlock:^(UIImage *image) {
         ws.coverImage.image = image;
         //将处理的结果置空
@@ -66,8 +57,8 @@
         ws.livePhotoView.livePhoto = nil;
         ws.livePhotoView.hidden = YES;
     }];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(rePlayVideo) name:AVPlayerItemDidPlayToEndTimeNotification object:player.currentItem];
+    [self.player play];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(rePlayVideo) name:AVPlayerItemDidPlayToEndTimeNotification object:self.player.currentItem];
     //监听进入后台
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enterBackground) name:UIApplicationDidEnterBackgroundNotification object:nil];
     //监听进入前台
@@ -100,7 +91,7 @@
     [self.frameView updateImage:image currentTime:currentTimeStr];
 
     //更新 frameView 的 位置。
-    CGFloat currentX = [UIScreen mainScreen].bounds.size.width * sender.value;
+    CGFloat currentX = ([UIScreen mainScreen].bounds.size.width-30) * sender.value + 15;
     CGFloat frameViewWidth = self.frameView.bounds.size.width;
     CGFloat maxX = [UIScreen mainScreen].bounds.size.width - frameViewWidth/2;
     CGFloat minX = frameViewWidth/2;
@@ -148,8 +139,8 @@
 
 - (IBAction)saveLivePhoto:(UIButton *)sender {
     NSString * assetIdentifier = [[NSUUID UUID] UUIDString];
-    NSString * imagePath = [self getFilePathWithKey:@"IMG.jpg"];
-    NSString * videoPath = [self getFilePathWithKey:@"IMG.mov"];
+    NSString * imagePath = [self getFilePathWithKey:@"IMG.JPG"];
+    NSString * videoPath = [self getFilePathWithKey:@"IMG.MOV"];
     
     if (_videoWriteRes && _imageWriteRes) {
         //如果是 已经处理好了，那就直接存储。
@@ -164,9 +155,6 @@
         return;
     }
     
-//    NSString * path = [[NSBundle mainBundle] pathForResource:@"video" ofType:@"mp4"];
-//    NSURL * URL = [NSURL fileURLWithPath:path];
-//    UIImage * image = [self getVideoImageWithTime:5.0 videoPath:URL];
     if (self.coverImage) {
         NSData * imageData = UIImageJPEGRepresentation(self.coverImage.image, 1.0);
         BOOL isok = [imageData writeToFile:[self getFilePathWithKey:@"image.jpg"] atomically:YES];
@@ -174,8 +162,8 @@
             NSLog(@"图片写入错误！！");
         }
         //1.先把旧文件移除
-        [[NSFileManager defaultManager] removeItemAtPath:[self getFilePathWithKey:@"IMG.jpg"] error:nil];
-        [[NSFileManager defaultManager] removeItemAtPath:[self getFilePathWithKey:@"IMG.mov"] error:nil];
+        [[NSFileManager defaultManager] removeItemAtPath:[self getFilePathWithKey:@"IMG.JPG"] error:nil];
+        [[NSFileManager defaultManager] removeItemAtPath:[self getFilePathWithKey:@"IMG.MOV"] error:nil];
         
         
         dispatch_group_t group = dispatch_group_create();
@@ -229,17 +217,30 @@
  https://github.com/genadyo/LivePhotoDemo
  */
 
-- (void)writeLive:(NSURL *)videPath image:(NSURL *)imagePath {
-    [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
-        PHAssetCreationRequest * request = [PHAssetCreationRequest creationRequestForAsset];
-        [request addResourceWithType:PHAssetResourceTypePhoto fileURL:imagePath options:nil];
-        [request addResourceWithType:PHAssetResourceTypePairedVideo fileURL:videPath options:nil];
-    } completionHandler:^(BOOL success, NSError * _Nullable error) {
-        if (success) {
-            //保存成功
-            NSLog(@"保存成功");
-        }
-    }];
+- (void)writeLive:(NSURL *)videoPath image:(NSURL *)imagePath {
+    if ([PhotoLibrary photoLibraryIsAuth]) {
+        //已经授权
+        [PhotoLibrary writeLivePhotoWithVideo:videoPath image:imagePath result:^(BOOL res) {
+            if (res) {
+                //写入成功
+            } else {
+                //写入失败
+            }
+        }];
+    } else {
+        //未授权，给一个提示框
+        UIAlertController * alertCon = [UIAlertController alertControllerWithTitle:@"提示" message:@"App需要访问你的相册才能将数据写入相册，现在去设置开启权限。" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction * cancel = [UIAlertAction actionWithTitle:@"不写入了" style:UIAlertActionStyleDefault handler:nil];
+        UIAlertAction * action = [UIAlertAction actionWithTitle:@"现在去设置" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            NSURL * URL = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+            if ([[UIApplication sharedApplication] canOpenURL:URL]) {
+                [[UIApplication sharedApplication] openURL:URL options:@{} completionHandler:nil];
+            }
+        }];
+        [alertCon addAction:cancel];
+        [alertCon addAction:action];
+        [self.navigationController presentViewController:alertCon animated:YES completion:nil];
+    }
 }
 
 
@@ -269,6 +270,20 @@
         return img;
 }
 
+#pragma lazy -- 
+- (AVPlayer *)player {
+    if (_player == nil) {
+        [super viewDidLoad];
+        AVPlayer *player = [AVPlayer playerWithURL:[NSURL fileURLWithPath:self.originVideoPath]];
+        AVPlayerLayer * playerLayer = [AVPlayerLayer playerLayerWithPlayer:player];
+        playerLayer.frame = self.playerView.bounds;
+        [self.playerView.layer insertSublayer:playerLayer below:self.slider.layer];
+        playerLayer.videoGravity = AVLayerVideoGravityResizeAspect;
+        _player = player;
+    }
+    return _player;
+}
+
 /**
  获取沙盒路径
 
@@ -279,13 +294,6 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentDirectory = paths.firstObject;
     return [documentDirectory stringByAppendingPathComponent:key];
-}
-
-- (NSString *)originVideoPath {
-    if (_originVideoPath == nil) {
-        _originVideoPath = [[NSBundle mainBundle] pathForResource:@"video" ofType:@"mp4"];
-    }
-    return _originVideoPath;
 }
 
 - (void)didReceiveMemoryWarning {

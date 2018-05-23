@@ -18,8 +18,13 @@
 		FA447F0C20A93C1200F370DE /* LivePhotoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA447F0B20A93C1200F370DE /* LivePhotoTests.m */; };
 		FA447F1720A93C1200F370DE /* LivePhotoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA447F1620A93C1200F370DE /* LivePhotoUITests.m */; };
 		FA447F2520A99F9600F370DE /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = FA447F2420A99F9600F370DE /* video.mp4 */; };
+		FA7F2EAD20B512D100E5FA21 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7F2EAC20B512D100E5FA21 /* RootViewController.m */; };
+		FA7F2EB020B526C600E5FA21 /* PhotoLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7F2EAF20B526C600E5FA21 /* PhotoLibrary.m */; };
 		FA9D45EE20ABD83000E7DFB1 /* FrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9D45ED20ABD83000E7DFB1 /* FrameView.m */; };
 		FA9D45F020ABD84000E7DFB1 /* FrameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9D45EF20ABD84000E7DFB1 /* FrameView.xib */; };
+		FABB198220B2CB5900F94125 /* LivePhotoShare.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FABB197720B2CB5900F94125 /* LivePhotoShare.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FABB198E20B2DC1400F94125 /* ShareLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FABB198C20B2DC1400F94125 /* ShareLiveViewController.m */; };
+		FABB198F20B2DC1400F94125 /* ShareLiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABB198D20B2DC1400F94125 /* ShareLiveViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +42,28 @@
 			remoteGlobalIDString = FA447EEE20A93C1100F370DE;
 			remoteInfo = LivePhoto;
 		};
+		FABB198020B2CB5900F94125 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA447EE720A93C1100F370DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FABB197620B2CB5900F94125;
+			remoteInfo = LivePhotoShare;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FABB198620B2CB5900F94125 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FABB198220B2CB5900F94125 /* LivePhotoShare.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FA1F8BD220AA858900170CE7 /* JPEG.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JPEG.h; sourceTree = "<group>"; };
@@ -61,9 +87,20 @@
 		FA447F1620A93C1200F370DE /* LivePhotoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LivePhotoUITests.m; sourceTree = "<group>"; };
 		FA447F1820A93C1200F370DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA447F2420A99F9600F370DE /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
+		FA7F2EAB20B512D100E5FA21 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		FA7F2EAC20B512D100E5FA21 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		FA7F2EAE20B526C600E5FA21 /* PhotoLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoLibrary.h; sourceTree = "<group>"; };
+		FA7F2EAF20B526C600E5FA21 /* PhotoLibrary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoLibrary.m; sourceTree = "<group>"; };
 		FA9D45EC20ABD83000E7DFB1 /* FrameView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FrameView.h; sourceTree = "<group>"; };
 		FA9D45ED20ABD83000E7DFB1 /* FrameView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FrameView.m; sourceTree = "<group>"; };
 		FA9D45EF20ABD84000E7DFB1 /* FrameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FrameView.xib; sourceTree = "<group>"; };
+		FAADE6B220B41ACD006BEDD7 /* LivePhoto.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LivePhoto.entitlements; sourceTree = "<group>"; };
+		FAADE6B320B41AFD006BEDD7 /* LivePhotoShare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LivePhotoShare.entitlements; sourceTree = "<group>"; };
+		FABB197720B2CB5900F94125 /* LivePhotoShare.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LivePhotoShare.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FABB197F20B2CB5900F94125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FABB198B20B2DC1400F94125 /* ShareLiveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareLiveViewController.h; sourceTree = "<group>"; };
+		FABB198C20B2DC1400F94125 /* ShareLiveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareLiveViewController.m; sourceTree = "<group>"; };
+		FABB198D20B2DC1400F94125 /* ShareLiveViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShareLiveViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +119,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FA447F0F20A93C1200F370DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FABB197420B2CB5900F94125 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -108,6 +152,7 @@
 				FA447EF120A93C1100F370DE /* LivePhoto */,
 				FA447F0A20A93C1200F370DE /* LivePhotoTests */,
 				FA447F1520A93C1200F370DE /* LivePhotoUITests */,
+				FABB197820B2CB5900F94125 /* LivePhotoShare */,
 				FA447EF020A93C1100F370DE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -118,6 +163,7 @@
 				FA447EEF20A93C1100F370DE /* LivePhoto.app */,
 				FA447F0720A93C1200F370DE /* LivePhotoTests.xctest */,
 				FA447F1220A93C1200F370DE /* LivePhotoUITests.xctest */,
+				FABB197720B2CB5900F94125 /* LivePhotoShare.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,10 +171,15 @@
 		FA447EF120A93C1100F370DE /* LivePhoto */ = {
 			isa = PBXGroup;
 			children = (
+				FAADE6B220B41ACD006BEDD7 /* LivePhoto.entitlements */,
 				FA447F2420A99F9600F370DE /* video.mp4 */,
 				FA447EF220A93C1100F370DE /* AppDelegate.h */,
 				FA447EF320A93C1100F370DE /* AppDelegate.m */,
+				FA7F2EAE20B526C600E5FA21 /* PhotoLibrary.h */,
+				FA7F2EAF20B526C600E5FA21 /* PhotoLibrary.m */,
 				FA1F8BDA20AAD10300170CE7 /* Library */,
+				FA7F2EAB20B512D100E5FA21 /* RootViewController.h */,
+				FA7F2EAC20B512D100E5FA21 /* RootViewController.m */,
 				FA447EF520A93C1100F370DE /* ViewController.h */,
 				FA447EF620A93C1100F370DE /* ViewController.m */,
 				FA9D45EC20ABD83000E7DFB1 /* FrameView.h */,
@@ -161,6 +212,18 @@
 			path = LivePhotoUITests;
 			sourceTree = "<group>";
 		};
+		FABB197820B2CB5900F94125 /* LivePhotoShare */ = {
+			isa = PBXGroup;
+			children = (
+				FAADE6B320B41AFD006BEDD7 /* LivePhotoShare.entitlements */,
+				FABB198B20B2DC1400F94125 /* ShareLiveViewController.h */,
+				FABB198C20B2DC1400F94125 /* ShareLiveViewController.m */,
+				FABB198D20B2DC1400F94125 /* ShareLiveViewController.xib */,
+				FABB197F20B2CB5900F94125 /* Info.plist */,
+			);
+			path = LivePhotoShare;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -171,10 +234,12 @@
 				FA447EEB20A93C1100F370DE /* Sources */,
 				FA447EEC20A93C1100F370DE /* Frameworks */,
 				FA447EED20A93C1100F370DE /* Resources */,
+				FABB198620B2CB5900F94125 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FABB198120B2CB5900F94125 /* PBXTargetDependency */,
 			);
 			name = LivePhoto;
 			productName = LivePhoto;
@@ -217,6 +282,23 @@
 			productReference = FA447F1220A93C1200F370DE /* LivePhotoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		FABB197620B2CB5900F94125 /* LivePhotoShare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FABB198520B2CB5900F94125 /* Build configuration list for PBXNativeTarget "LivePhotoShare" */;
+			buildPhases = (
+				FABB197320B2CB5900F94125 /* Sources */,
+				FABB197420B2CB5900F94125 /* Frameworks */,
+				FABB197520B2CB5900F94125 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LivePhotoShare;
+			productName = LivePhotoShare;
+			productReference = FABB197720B2CB5900F94125 /* LivePhotoShare.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -228,6 +310,11 @@
 				TargetAttributes = {
 					FA447EEE20A93C1100F370DE = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					FA447F0620A93C1200F370DE = {
 						CreatedOnToolsVersion = 9.3;
@@ -236,6 +323,14 @@
 					FA447F1120A93C1200F370DE = {
 						CreatedOnToolsVersion = 9.3;
 						TestTargetID = FA447EEE20A93C1100F370DE;
+					};
+					FABB197620B2CB5900F94125 = {
+						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -255,6 +350,7 @@
 				FA447EEE20A93C1100F370DE /* LivePhoto */,
 				FA447F0620A93C1200F370DE /* LivePhotoTests */,
 				FA447F1120A93C1200F370DE /* LivePhotoUITests */,
+				FABB197620B2CB5900F94125 /* LivePhotoShare */,
 			);
 		};
 /* End PBXProject section */
@@ -286,6 +382,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FABB197520B2CB5900F94125 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FABB198F20B2DC1400F94125 /* ShareLiveViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -294,8 +398,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA9D45EE20ABD83000E7DFB1 /* FrameView.m in Sources */,
+				FA7F2EAD20B512D100E5FA21 /* RootViewController.m in Sources */,
 				FA447EF720A93C1100F370DE /* ViewController.m in Sources */,
 				FA1F8BD720AAA03200170CE7 /* QuickTimeMov.m in Sources */,
+				FA7F2EB020B526C600E5FA21 /* PhotoLibrary.m in Sources */,
 				FA447F0220A93C1200F370DE /* main.m in Sources */,
 				FA447EF420A93C1100F370DE /* AppDelegate.m in Sources */,
 				FA1F8BD420AA858900170CE7 /* JPEG.m in Sources */,
@@ -318,6 +424,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FABB197320B2CB5900F94125 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FABB198E20B2DC1400F94125 /* ShareLiveViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -330,6 +444,11 @@
 			isa = PBXTargetDependency;
 			target = FA447EEE20A93C1100F370DE /* LivePhoto */;
 			targetProxy = FA447F1320A93C1200F370DE /* PBXContainerItemProxy */;
+		};
+		FABB198120B2CB5900F94125 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FABB197620B2CB5900F94125 /* LivePhotoShare */;
+			targetProxy = FABB198020B2CB5900F94125 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -467,6 +586,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LivePhoto/LivePhoto.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G4E6298X77;
@@ -488,6 +608,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LivePhoto/LivePhoto.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G4E6298X77;
@@ -578,6 +699,48 @@
 			};
 			name = Release;
 		};
+		FABB198320B2CB5900F94125 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = LivePhotoShare/LivePhotoShare.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G4E6298X77;
+				INFOPLIST_FILE = LivePhotoShare/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = SH.LivePhoto.LivePhotoShare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FABB198420B2CB5900F94125 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = LivePhotoShare/LivePhotoShare.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G4E6298X77;
+				INFOPLIST_FILE = LivePhotoShare/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = SH.LivePhoto.LivePhotoShare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -613,6 +776,15 @@
 			buildConfigurations = (
 				FA447F2220A93C1300F370DE /* Debug */,
 				FA447F2320A93C1300F370DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FABB198520B2CB5900F94125 /* Build configuration list for PBXNativeTarget "LivePhotoShare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FABB198320B2CB5900F94125 /* Debug */,
+				FABB198420B2CB5900F94125 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
