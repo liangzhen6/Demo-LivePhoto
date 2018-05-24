@@ -38,7 +38,7 @@
 - (void)viewDidLoad {
     CGFloat width = [UIScreen mainScreen].bounds.size.width/3;
     CGFloat height = width * 9/16;
-    
+    [self.player play];
     _frameView = [FrameView frameViewWithFrame:CGRectMake(0, self.playerView.bounds.size.height - height - 30, width, height)];
     [self.playerView addSubview:_frameView];
     __weak typeof (self)ws = self;
@@ -57,7 +57,7 @@
         ws.livePhotoView.livePhoto = nil;
         ws.livePhotoView.hidden = YES;
     }];
-    [self.player play];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(rePlayVideo) name:AVPlayerItemDidPlayToEndTimeNotification object:self.player.currentItem];
     //监听进入后台
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enterBackground) name:UIApplicationDidEnterBackgroundNotification object:nil];
