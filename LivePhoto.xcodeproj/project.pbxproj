@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1CB6E895934F8306255D0126 /* libPods-LivePhotoShare.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6A17320AD56B8A6FDDF188 /* libPods-LivePhotoShare.a */; };
+		9163C694C2DE31FEF4745546 /* libPods-LivePhotoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4C0946B97272BB56EB6D0B /* libPods-LivePhotoUITests.a */; };
+		B22758B6C0554D75B4C276B9 /* libPods-LivePhoto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B31F5352D427739A1FBF5206 /* libPods-LivePhoto.a */; };
+		CC854222A8C4D3D83AF13EA9 /* libPods-LivePhotoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 063508FD986FA21F9433D9BC /* libPods-LivePhotoTests.a */; };
 		FA1F85EF20B68E4A00F7B7EE /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1F85EE20B68E4900F7B7EE /* close.png */; };
 		FA1F85F120B691FF00F7B7EE /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1F85F020B691FF00F7B7EE /* play.png */; };
 		FA1F8BD420AA858900170CE7 /* JPEG.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1F8BD320AA858900170CE7 /* JPEG.m */; };
@@ -68,6 +72,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		063508FD986FA21F9433D9BC /* libPods-LivePhotoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LivePhotoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C6A17320AD56B8A6FDDF188 /* libPods-LivePhotoShare.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LivePhotoShare.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F1AF872EFB51E7F5C7ED759 /* Pods-LivePhoto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LivePhoto.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LivePhoto/Pods-LivePhoto.debug.xcconfig"; sourceTree = "<group>"; };
+		4A4C0946B97272BB56EB6D0B /* libPods-LivePhotoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LivePhotoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		667F502D3AC77E75543A19EB /* Pods-LivePhotoShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LivePhotoShare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LivePhotoShare/Pods-LivePhotoShare.debug.xcconfig"; sourceTree = "<group>"; };
+		B31F5352D427739A1FBF5206 /* libPods-LivePhoto.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LivePhoto.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8471E0C9489C177D06FAC75 /* Pods-LivePhotoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LivePhotoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LivePhotoTests/Pods-LivePhotoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BE0EFE1EC87F26D5D2FDCDE7 /* Pods-LivePhotoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LivePhotoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LivePhotoUITests/Pods-LivePhotoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E40B5A919E505B3794D72C82 /* Pods-LivePhotoShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LivePhotoShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-LivePhotoShare/Pods-LivePhotoShare.release.xcconfig"; sourceTree = "<group>"; };
+		ED1399D56C63183A4A5D324C /* Pods-LivePhotoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LivePhotoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LivePhotoTests/Pods-LivePhotoTests.release.xcconfig"; sourceTree = "<group>"; };
+		F3E38BC1EC270E90B005F022 /* Pods-LivePhotoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LivePhotoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LivePhotoUITests/Pods-LivePhotoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F5DBF7CBBFB68EE8DB5B106E /* Pods-LivePhoto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LivePhoto.release.xcconfig"; path = "Pods/Target Support Files/Pods-LivePhoto/Pods-LivePhoto.release.xcconfig"; sourceTree = "<group>"; };
 		FA1F85EE20B68E4900F7B7EE /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 		FA1F85F020B691FF00F7B7EE /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		FA1F8BD220AA858900170CE7 /* JPEG.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JPEG.h; sourceTree = "<group>"; };
@@ -112,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B22758B6C0554D75B4C276B9 /* libPods-LivePhoto.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC854222A8C4D3D83AF13EA9 /* libPods-LivePhotoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9163C694C2DE31FEF4745546 /* libPods-LivePhotoUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,12 +152,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CB6E895934F8306255D0126 /* libPods-LivePhotoShare.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34F023CABF631993627C1395 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B31F5352D427739A1FBF5206 /* libPods-LivePhoto.a */,
+				2C6A17320AD56B8A6FDDF188 /* libPods-LivePhotoShare.a */,
+				063508FD986FA21F9433D9BC /* libPods-LivePhotoTests.a */,
+				4A4C0946B97272BB56EB6D0B /* libPods-LivePhotoUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D17DA4CE0DEB560680D5A055 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2F1AF872EFB51E7F5C7ED759 /* Pods-LivePhoto.debug.xcconfig */,
+				F5DBF7CBBFB68EE8DB5B106E /* Pods-LivePhoto.release.xcconfig */,
+				667F502D3AC77E75543A19EB /* Pods-LivePhotoShare.debug.xcconfig */,
+				E40B5A919E505B3794D72C82 /* Pods-LivePhotoShare.release.xcconfig */,
+				B8471E0C9489C177D06FAC75 /* Pods-LivePhotoTests.debug.xcconfig */,
+				ED1399D56C63183A4A5D324C /* Pods-LivePhotoTests.release.xcconfig */,
+				F3E38BC1EC270E90B005F022 /* Pods-LivePhotoUITests.debug.xcconfig */,
+				BE0EFE1EC87F26D5D2FDCDE7 /* Pods-LivePhotoUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		FA1F8BDA20AAD10300170CE7 /* Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +204,8 @@
 				FA447F1520A93C1200F370DE /* LivePhotoUITests */,
 				FABB197820B2CB5900F94125 /* LivePhotoShare */,
 				FA447EF020A93C1100F370DE /* Products */,
+				D17DA4CE0DEB560680D5A055 /* Pods */,
+				34F023CABF631993627C1395 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -237,10 +285,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA447F1B20A93C1300F370DE /* Build configuration list for PBXNativeTarget "LivePhoto" */;
 			buildPhases = (
+				311BC81EDF313F9D833A981D /* [CP] Check Pods Manifest.lock */,
 				FA447EEB20A93C1100F370DE /* Sources */,
 				FA447EEC20A93C1100F370DE /* Frameworks */,
 				FA447EED20A93C1100F370DE /* Resources */,
 				FABB198620B2CB5900F94125 /* Embed App Extensions */,
+				BC8A83C48A01DC60CC78EE4D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,6 +306,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA447F1E20A93C1300F370DE /* Build configuration list for PBXNativeTarget "LivePhotoTests" */;
 			buildPhases = (
+				772765332CEC648A440C2B8F /* [CP] Check Pods Manifest.lock */,
 				FA447F0320A93C1200F370DE /* Sources */,
 				FA447F0420A93C1200F370DE /* Frameworks */,
 				FA447F0520A93C1200F370DE /* Resources */,
@@ -274,6 +325,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA447F2120A93C1300F370DE /* Build configuration list for PBXNativeTarget "LivePhotoUITests" */;
 			buildPhases = (
+				A06EB353A5AF7B6E01FBC16E /* [CP] Check Pods Manifest.lock */,
 				FA447F0E20A93C1200F370DE /* Sources */,
 				FA447F0F20A93C1200F370DE /* Frameworks */,
 				FA447F1020A93C1200F370DE /* Resources */,
@@ -292,6 +344,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FABB198520B2CB5900F94125 /* Build configuration list for PBXNativeTarget "LivePhotoShare" */;
 			buildPhases = (
+				44970FDD375F5B763AE419F7 /* [CP] Check Pods Manifest.lock */,
 				FABB197320B2CB5900F94125 /* Sources */,
 				FABB197420B2CB5900F94125 /* Frameworks */,
 				FABB197520B2CB5900F94125 /* Resources */,
@@ -399,6 +452,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		311BC81EDF313F9D833A981D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LivePhoto-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		44970FDD375F5B763AE419F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LivePhotoShare-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		772765332CEC648A440C2B8F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LivePhotoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A06EB353A5AF7B6E01FBC16E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LivePhotoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC8A83C48A01DC60CC78EE4D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LivePhoto/Pods-LivePhoto-resources.sh",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LivePhoto/Pods-LivePhoto-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FA447EEB20A93C1100F370DE /* Sources */ = {
@@ -592,6 +738,7 @@
 		};
 		FA447F1C20A93C1300F370DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F1AF872EFB51E7F5C7ED759 /* Pods-LivePhoto.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = LivePhoto/LivePhoto.entitlements;
@@ -600,10 +747,7 @@
 				DEVELOPMENT_TEAM = G4E6298X77;
 				INFOPLIST_FILE = LivePhoto/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SH.LivePhoto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -614,6 +758,7 @@
 		};
 		FA447F1D20A93C1300F370DE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5DBF7CBBFB68EE8DB5B106E /* Pods-LivePhoto.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = LivePhoto/LivePhoto.entitlements;
@@ -622,10 +767,7 @@
 				DEVELOPMENT_TEAM = G4E6298X77;
 				INFOPLIST_FILE = LivePhoto/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SH.LivePhoto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -635,16 +777,13 @@
 		};
 		FA447F1F20A93C1300F370DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8471E0C9489C177D06FAC75 /* Pods-LivePhotoTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G4E6298X77;
 				INFOPLIST_FILE = LivePhotoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SH.LivePhotoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -654,16 +793,13 @@
 		};
 		FA447F2020A93C1300F370DE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED1399D56C63183A4A5D324C /* Pods-LivePhotoTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G4E6298X77;
 				INFOPLIST_FILE = LivePhotoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SH.LivePhotoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -673,15 +809,12 @@
 		};
 		FA447F2220A93C1300F370DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3E38BC1EC270E90B005F022 /* Pods-LivePhotoUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G4E6298X77;
 				INFOPLIST_FILE = LivePhotoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SH.LivePhotoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -691,15 +824,12 @@
 		};
 		FA447F2320A93C1300F370DE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE0EFE1EC87F26D5D2FDCDE7 /* Pods-LivePhotoUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G4E6298X77;
 				INFOPLIST_FILE = LivePhotoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SH.LivePhotoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -709,6 +839,7 @@
 		};
 		FABB198320B2CB5900F94125 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 667F502D3AC77E75543A19EB /* Pods-LivePhotoShare.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = LivePhotoShare/LivePhotoShare.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -716,11 +847,7 @@
 				DEVELOPMENT_TEAM = G4E6298X77;
 				INFOPLIST_FILE = LivePhotoShare/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SH.LivePhoto.LivePhotoShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -730,6 +857,7 @@
 		};
 		FABB198420B2CB5900F94125 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E40B5A919E505B3794D72C82 /* Pods-LivePhotoShare.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = LivePhotoShare/LivePhotoShare.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -737,11 +865,7 @@
 				DEVELOPMENT_TEAM = G4E6298X77;
 				INFOPLIST_FILE = LivePhotoShare/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SH.LivePhoto.LivePhotoShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

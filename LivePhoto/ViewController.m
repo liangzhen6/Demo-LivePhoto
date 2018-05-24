@@ -14,6 +14,7 @@
 #import <AVFoundation/AVAssetImageGenerator.h>
 #import <AVFoundation/AVTime.h>
 #import <AVFoundation/AVFoundation.h>
+#import <SVProgressHUD.h>
 
 #import "JPEG.h"
 #import "QuickTimeMov.h"
@@ -165,6 +166,8 @@
         [[NSFileManager defaultManager] removeItemAtPath:[self getFilePathWithKey:@"IMG.JPG"] error:nil];
         [[NSFileManager defaultManager] removeItemAtPath:[self getFilePathWithKey:@"IMG.MOV"] error:nil];
         
+        [SVProgressHUD setDefaultAnimationType:SVProgressHUDAnimationTypeNative];
+        [SVProgressHUD showWithStatus:@"制作中..."];
         
         dispatch_group_t group = dispatch_group_create();
         dispatch_queue_t globle = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
@@ -186,6 +189,8 @@
         
         dispatch_group_notify(group, dispatch_get_main_queue(), ^{
             if (ws.videoWriteRes && ws.imageWriteRes) {
+                [SVProgressHUD showSuccessWithStatus:@"制作完成"];
+                [SVProgressHUD dismissWithDelay:0.5];
                 // 展示出 live photo
                 ws.livePhotoView.hidden = NO;
                 [PHLivePhoto requestLivePhotoWithResourceFileURLs:@[[NSURL fileURLWithPath:videoPath], [NSURL fileURLWithPath:imagePath]] placeholderImage:self.coverImage.image targetSize:self.coverImage.image.size contentMode:PHImageContentModeAspectFit resultHandler:^(PHLivePhoto * _Nullable livePhoto, NSDictionary * _Nonnull info) {
