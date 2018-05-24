@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA1F85EF20B68E4A00F7B7EE /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1F85EE20B68E4900F7B7EE /* close.png */; };
+		FA1F85F120B691FF00F7B7EE /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1F85F020B691FF00F7B7EE /* play.png */; };
 		FA1F8BD420AA858900170CE7 /* JPEG.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1F8BD320AA858900170CE7 /* JPEG.m */; };
 		FA1F8BD720AAA03200170CE7 /* QuickTimeMov.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1F8BD620AAA03200170CE7 /* QuickTimeMov.m */; };
 		FA447EF420A93C1100F370DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA447EF320A93C1100F370DE /* AppDelegate.m */; };
@@ -66,6 +68,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FA1F85EE20B68E4900F7B7EE /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
+		FA1F85F020B691FF00F7B7EE /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		FA1F8BD220AA858900170CE7 /* JPEG.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JPEG.h; sourceTree = "<group>"; };
 		FA1F8BD320AA858900170CE7 /* JPEG.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JPEG.m; sourceTree = "<group>"; };
 		FA1F8BD520AAA03200170CE7 /* QuickTimeMov.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuickTimeMov.h; sourceTree = "<group>"; };
@@ -215,6 +219,8 @@
 		FABB197820B2CB5900F94125 /* LivePhotoShare */ = {
 			isa = PBXGroup;
 			children = (
+				FA1F85F020B691FF00F7B7EE /* play.png */,
+				FA1F85EE20B68E4900F7B7EE /* close.png */,
 				FAADE6B320B41AFD006BEDD7 /* LivePhotoShare.entitlements */,
 				FABB198B20B2DC1400F94125 /* ShareLiveViewController.h */,
 				FABB198C20B2DC1400F94125 /* ShareLiveViewController.m */,
@@ -386,7 +392,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA1F85EF20B68E4A00F7B7EE /* close.png in Resources */,
 				FABB198F20B2DC1400F94125 /* ShareLiveViewController.xib in Resources */,
+				FA1F85F120B691FF00F7B7EE /* play.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

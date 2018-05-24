@@ -11,12 +11,14 @@
 @interface ShareLiveViewController ()
 @property (weak, nonatomic) IBOutlet UIView *videoView;
 @property(nonatomic,copy)NSString *lastAppending;
+@property(nonatomic,strong)AVPlayer *player;
 @end
 
 @implementation ShareLiveViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.75];
     __weak typeof (self) ws = self;
     [self.extensionContext.inputItems enumerateObjectsUsingBlock:^(NSExtensionItem *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         [obj.attachments enumerateObjectsUsingBlock:^(NSItemProvider *  _Nonnull itemProvider, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -55,6 +57,14 @@
     playerLayer.frame = self.videoView.bounds;
     [self.videoView.layer addSublayer:playerLayer];
     [player play];
+    self.player = player;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(rePlayVideo) name:AVPlayerItemDidPlayToEndTimeNotification object:player.currentItem];
+}
+
+- (void)rePlayVideo {
+    CMTime dragedCMTime = CMTimeMake(0, 1);
+    [self.player seekToTime:dragedCMTime];
+    [self.player play];
 }
 
 - (IBAction)cancelAction:(UIButton *)sender {
@@ -71,6 +81,9 @@
     }
 }
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
