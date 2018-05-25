@@ -21,23 +21,7 @@
     // Override point for customization after application launch.
     return YES;
 }
-/*
- <key>CFBundleDocumentTypes</key>
- <array>
- <dict>
- <key>CFBundleTypeIconFiles</key>
- <array>
- <string>copy.png</string>
- </array>
- <key>LSHandlerRank</key>
- <string>Default</string>
- <key>LSItemContentTypes</key>
- <array>
- <string>public.video</string>
- </array>
- </dict>
- </array>
- */
+
 - (BOOL)application:(UIApplication *)application openURL:(nonnull NSURL *)url options:(nonnull NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
     NSLog(@"%@",url);
     UINavigationController * nav = (UINavigationController *)self.window.rootViewController;

@@ -228,9 +228,12 @@
         [PhotoLibrary writeLivePhotoWithVideo:videoPath image:imagePath result:^(BOOL res) {
             if (res) {
                 //写入成功
+                [SVProgressHUD showSuccessWithStatus:@"写入相册成功"];
             } else {
                 //写入失败
+                [SVProgressHUD showErrorWithStatus:@"写入相册失败"];
             }
+            [SVProgressHUD dismissWithDelay:1.0];
         }];
     } else {
         //未授权，给一个提示框
@@ -252,7 +255,7 @@
 /**
  获取视频的 某一帧
 
- @param currentTime 某一时刻
+ @param currentTime 某一时刻单位 s
  @param path 视频路径
  @return return 返回image
  */

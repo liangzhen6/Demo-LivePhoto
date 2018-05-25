@@ -55,12 +55,12 @@ static PhotoLibrary * _photoLibrary = nil;
 - (void)chooseVideoFromPhotoLibraryResult:(ResultBlock)result {
     UIImagePickerController *imagePick = [[UIImagePickerController alloc] init];
     imagePick.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
-    imagePick.mediaTypes = @[@"public.movie"];
+    imagePick.mediaTypes = @[@"public.movie"];//只获取视频数据
     imagePick.delegate = self;
     self.result = result;
     [[[UIApplication sharedApplication] delegate].window.rootViewController presentViewController:imagePick animated:YES completion:nil];
 }
-
+// UIImagePickerController 的选择结果的代理方法。
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     [picker dismissViewControllerAnimated:YES completion:nil];
     if ([[info[@"UIImagePickerControllerMediaURL"] absoluteString] length]) {
